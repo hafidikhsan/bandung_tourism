@@ -11,8 +11,6 @@ class ThemeSettingScreen extends StatefulWidget {
 }
 
 class _ThemeSettingScreenState extends State<ThemeSettingScreen> {
-  final ThemeModeEnum? _themeMode = ThemeModeEnum.lightTheme;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +27,9 @@ class _ThemeSettingScreenState extends State<ThemeSettingScreen> {
                   value: ThemeModeEnum.lightTheme,
                   groupValue: state.isDark,
                   onChanged: (value) => context.read<ThemeManagerBloc>().add(
-                        const LoadThemeMode(isDark: ThemeModeEnum.lightTheme),
+                        const SaveThemeMode(
+                          isDark: ThemeModeEnum.lightTheme,
+                        ),
                       ),
                 ),
               ),
@@ -39,7 +39,9 @@ class _ThemeSettingScreenState extends State<ThemeSettingScreen> {
                   value: ThemeModeEnum.darkTheme,
                   groupValue: state.isDark,
                   onChanged: (value) => context.read<ThemeManagerBloc>().add(
-                        const LoadThemeMode(isDark: ThemeModeEnum.darkTheme),
+                        const SaveThemeMode(
+                          isDark: ThemeModeEnum.darkTheme,
+                        ),
                       ),
                 ),
               ),
@@ -49,7 +51,9 @@ class _ThemeSettingScreenState extends State<ThemeSettingScreen> {
                   value: ThemeModeEnum.systemTheme,
                   groupValue: state.isDark,
                   onChanged: (value) => context.read<ThemeManagerBloc>().add(
-                        const LoadThemeMode(isDark: ThemeModeEnum.systemTheme),
+                        const SaveThemeMode(
+                          isDark: ThemeModeEnum.systemTheme,
+                        ),
                       ),
                 ),
               ),

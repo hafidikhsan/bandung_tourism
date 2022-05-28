@@ -7,10 +7,17 @@ abstract class ThemeManagerEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadThemeMode extends ThemeManagerEvent {
+class SaveThemeMode extends ThemeManagerEvent {
   final ThemeModeEnum isDark;
-  const LoadThemeMode({required this.isDark});
+  const SaveThemeMode({required this.isDark});
 
   @override
   List<Object> get props => [isDark];
+}
+
+class LoadTheme extends ThemeManagerEvent {
+  const LoadTheme();
+
+  @override
+  List<Object> get props => [];
 }
