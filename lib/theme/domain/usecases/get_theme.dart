@@ -1,5 +1,5 @@
 import 'package:bandung_tourism/theme/domain/repositories/theme_repository.dart';
-import 'package:bandung_tourism/utils/enum.dart';
+import 'package:bandung_tourism/theme/utils/enum.dart';
 
 class GetTheme {
   final ThemeRepository repository;

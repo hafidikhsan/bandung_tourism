@@ -1,4 +1,4 @@
-import 'package:bandung_tourism/utils/enum.dart';
+import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DatabaseHelper {

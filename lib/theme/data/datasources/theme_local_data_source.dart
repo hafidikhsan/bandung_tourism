@@ -1,6 +1,6 @@
-import 'package:bandung_tourism/common/exception.dart';
+import 'package:bandung_tourism/theme/common/exception.dart';
 import 'package:bandung_tourism/theme/data/datasources/database_helper.dart';
-import 'package:bandung_tourism/utils/enum.dart';
+import 'package:bandung_tourism/theme/utils/enum.dart';
 
 abstract class ThemeLocalDataSource {
   Future<String> updateTheme(ThemeModeEnum theme);

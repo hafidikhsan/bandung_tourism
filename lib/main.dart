@@ -2,7 +2,7 @@ import 'package:bandung_tourism/presentation/screens/home_screen.dart';
 import 'package:bandung_tourism/theme/presentation/bloc/theme_manager_bloc.dart';
 import 'package:bandung_tourism/theme/theme_data.dart';
 import 'package:bandung_tourism/theme/theme_injection.dart' as di;
-import 'package:bandung_tourism/utils/enum.dart';
+import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
