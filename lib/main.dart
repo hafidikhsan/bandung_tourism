@@ -5,9 +5,12 @@ import 'package:bandung_tourism/theme/theme_injection.dart' as di;
 import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   di.init();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(BlocProvider(
     create: (context) => di.locator<ThemeManagerBloc>(),
     child: const MyApp(),
@@ -24,10 +27,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-    super.initState();
     Future.microtask(() {
       context.read<ThemeManagerBloc>().add(const LoadTheme());
     });
+    super.initState();
   }
 
   @override

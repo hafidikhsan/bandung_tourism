@@ -19,12 +19,25 @@ dependencies:
   dartz: ^0.10.0-nullsafety.2
   get_it: ^7.1.3
   google_fonts: ^3.0.1
+  flutter_native_splash: ^2.0.1+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.0
+
+flutter_native_splash:
+  image: assets/splashscreen/logo_splash.png
+  background_image: assets/splashscreen/bg_splash_screen.png
+  background_image_dark: assets/splashscreen/bg_splash_screen_dark.png
+  image_dark: assets/splashscreen/logo_splash_dark.png
+  android_12:
+    image: assets/splashscreen/logo_splash.png
+    icon_background_color: "#F9FAFF"
+    color: "#F9FAFF"
+
+  web: false
 
 flutter:
   uses-material-design: true
