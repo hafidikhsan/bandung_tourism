@@ -1,4 +1,4 @@
-import 'package:bandung_tourism/presentation/components/icon_button.dart';
+import 'package:bandung_tourism/presentation/components/text_icon_button.dart';
 import 'package:bandung_tourism/presentation/screens/home_screen.dart';
 import 'package:bandung_tourism/theme/presentation/bloc/theme_manager_bloc.dart';
 import 'package:bandung_tourism/theme/theme_data.dart';
@@ -6,8 +6,8 @@ import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class IconButtonScreen extends StatelessWidget {
-  const IconButtonScreen({Key? key}) : super(key: key);
+class TextIconButtonScreen extends StatelessWidget {
+  const TextIconButtonScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class IconButtonScreen extends StatelessWidget {
     Brightness screenBrightness = MediaQuery.platformBrightnessOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Icon Button"),
+        title: const Text("Text Icon Button"),
       ),
       body: BlocBuilder<ThemeManagerBloc, ThemeManagerState>(
         builder: (context, state) {
@@ -54,7 +54,7 @@ class IconButtonScreen extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomIconButton(
+                  child: CustomTextIconButton(
                     icon: "assets/icon/upload.svg",
                     color: colorOne,
                     width: width,
@@ -71,7 +71,7 @@ class IconButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomIconButton(
+                  child: CustomTextIconButton(
                     icon: "assets/icon/map-marker.svg",
                     color: colorTwo,
                     width: width,
@@ -88,7 +88,7 @@ class IconButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomIconButton(
+                  child: CustomTextIconButton(
                     icon: "assets/icon/shopee.svg",
                     color: colorThree,
                     width: width,
@@ -105,7 +105,7 @@ class IconButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomIconButton(
+                  child: CustomTextIconButton(
                     icon: "assets/icon/tokopedia.svg",
                     color: colorOne,
                     width: width,
@@ -122,7 +122,7 @@ class IconButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomIconButton(
+                  child: CustomTextIconButton(
                     icon: "assets/icon/coupon.svg",
                     color: colorFour,
                     width: width,

@@ -2,13 +2,13 @@ import 'package:bandung_tourism/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CustomIconButton extends StatelessWidget {
+class CustomTextIconButton extends StatelessWidget {
   final Color color;
   final double width;
   final String text;
   final String icon;
   final Function() onTap;
-  const CustomIconButton({
+  const CustomTextIconButton({
     Key? key,
     required this.color,
     required this.width,
@@ -19,38 +19,30 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return ElevatedButton.icon(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
         primary: color,
         minimumSize: Size(
-          (width > 500)
-              ? 500
-              : (width < 280)
-                  ? 300
-                  : width,
+          (width < 300) ? 300 : width,
+          50,
+        ),
+        maximumSize: Size(
+          (width > 500) ? 500 : width,
           50,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0),
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            icon,
-            color: bTextPrimary,
-            height: 24,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: Text(
-              text,
-              style: bSubtitle4.copyWith(color: bTextPrimary),
-            ),
-          ),
-        ],
+      icon: SvgPicture.asset(
+        icon,
+        color: bTextPrimary,
+        height: 24,
+      ),
+      label: Text(
+        text,
+        style: bSubtitle4.copyWith(color: bTextPrimary),
       ),
     );
   }
