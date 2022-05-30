@@ -16,25 +16,25 @@ class CustomTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(
-        minHeight: 50,
-        maxHeight: 100,
-        minWidth: 500,
-        maxWidth: 600,
+    return ElevatedButton(
+      onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        primary: color,
+        minimumSize: Size(
+          (width < 300) ? 300 : width,
+          50,
+        ),
+        maximumSize: Size(
+          (width > 500) ? 500 : width,
+          50,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25.0),
+        ),
       ),
-      child: ElevatedButton(
-        onPressed: onTap,
-        style: ElevatedButton.styleFrom(
-          primary: color,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0),
-          ),
-        ),
-        child: Text(
-          text,
-          style: bSubtitle4.copyWith(color: bTextPrimary),
-        ),
+      child: Text(
+        text,
+        style: bSubtitle4.copyWith(color: bTextPrimary),
       ),
     );
   }
