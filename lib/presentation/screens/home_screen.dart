@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bandung_tourism/presentation/screens/check_box_screen.dart';
 import 'package:bandung_tourism/presentation/screens/text_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/text_icon_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/image_button_screen.dart';
@@ -117,6 +118,19 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: const Text(
                 'Validation Button',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CheckBoxScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Check Box',
               ),
             ),
           ],
