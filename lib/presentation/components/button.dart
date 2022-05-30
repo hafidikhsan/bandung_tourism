@@ -1,12 +1,12 @@
 import 'package:bandung_tourism/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final Color color;
   final double width;
   final String text;
   final Function() onTap;
-  const Button({
+  const CustomButton({
     Key? key,
     required this.color,
     required this.width,
