@@ -5,6 +5,7 @@ import 'package:bandung_tourism/presentation/screens/text_icon_button_screen.dar
 import 'package:bandung_tourism/presentation/screens/image_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/on_boarding_screen.dart';
 import 'package:bandung_tourism/presentation/screens/theme_setting_screen.dart';
+import 'package:bandung_tourism/presentation/screens/validation_button_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -103,6 +104,19 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: const Text(
                 'Icon Button',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ValidationScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Validation Button',
               ),
             ),
           ],
