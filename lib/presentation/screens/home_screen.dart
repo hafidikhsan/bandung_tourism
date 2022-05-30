@@ -97,12 +97,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ImageButtonScreen(),
+                    builder: (context) => const IconButtonScreen(),
                   ),
                 );
               },
               child: const Text(
-                'Image Button',
+                'Icon Button',
               ),
             ),
           ],

@@ -1,4 +1,4 @@
-import 'package:bandung_tourism/presentation/components/image_button.dart';
+import 'package:bandung_tourism/presentation/components/icon_button.dart';
 import 'package:bandung_tourism/presentation/screens/home_screen.dart';
 import 'package:bandung_tourism/theme/presentation/bloc/theme_manager_bloc.dart';
 import 'package:bandung_tourism/theme/theme_data.dart';
@@ -6,8 +6,8 @@ import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ImageButtonScreen extends StatelessWidget {
-  const ImageButtonScreen({Key? key}) : super(key: key);
+class IconButtonScreen extends StatelessWidget {
+  const IconButtonScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ImageButtonScreen extends StatelessWidget {
     Brightness screenBrightness = MediaQuery.platformBrightnessOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Image Button"),
+        title: const Text("Icon Button"),
       ),
       body: BlocBuilder<ThemeManagerBloc, ThemeManagerState>(
         builder: (context, state) {
@@ -50,7 +50,7 @@ class ImageButtonScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/facebook.svg",
                         color: colorOne,
                         width: width / 3,
@@ -64,7 +64,7 @@ class ImageButtonScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/twitter.svg",
                         color: colorOne,
                         width: width / 3,
@@ -78,7 +78,7 @@ class ImageButtonScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/google.svg",
                         color: colorOne,
                         width: width / 3,
@@ -100,7 +100,7 @@ class ImageButtonScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/facebook.svg",
                         color: colorTwo,
                         width: width / 3,
@@ -114,7 +114,7 @@ class ImageButtonScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/twitter.svg",
                         color: colorTwo,
                         width: width / 3,
@@ -128,7 +128,7 @@ class ImageButtonScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/google.svg",
                         color: colorTwo,
                         width: width / 3,
@@ -150,7 +150,7 @@ class ImageButtonScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/facebook.svg",
                         color: colorOne,
                         width: width / 2,
@@ -164,7 +164,7 @@ class ImageButtonScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/twitter.svg",
                         color: colorOne,
                         width: width / 2,
@@ -186,7 +186,7 @@ class ImageButtonScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomImageButton(
+                      CustomIconButton(
                         icon: "assets/icon/facebook.svg",
                         color: colorTwo,
                         width: width + 30,
