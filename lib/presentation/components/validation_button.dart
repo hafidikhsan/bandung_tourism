@@ -39,7 +39,7 @@ class ValidationButton extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: onTapAcc,
                 style: ElevatedButton.styleFrom(
-                  primary: (isLight) ? Colors.green : bGrey,
+                  primary: (isLight) ? bAccepted : bGrey,
                   minimumSize: const Size(
                     105,
                     25,
