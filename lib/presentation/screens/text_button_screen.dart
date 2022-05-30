@@ -1,4 +1,4 @@
-import 'package:bandung_tourism/presentation/components/button.dart';
+import 'package:bandung_tourism/presentation/components/text_button.dart';
 import 'package:bandung_tourism/presentation/screens/home_screen.dart';
 import 'package:bandung_tourism/theme/presentation/bloc/theme_manager_bloc.dart';
 import 'package:bandung_tourism/theme/theme_data.dart';
@@ -6,8 +6,8 @@ import 'package:bandung_tourism/theme/utils/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ButtonScreen extends StatelessWidget {
-  const ButtonScreen({Key? key}) : super(key: key);
+class TextButtonScreen extends StatelessWidget {
+  const TextButtonScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ButtonScreen extends StatelessWidget {
     Brightness screenBrightness = MediaQuery.platformBrightnessOf(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Icon Button"),
+        title: const Text("Text Button"),
       ),
       body: BlocBuilder<ThemeManagerBloc, ThemeManagerState>(
         builder: (context, state) {
@@ -54,7 +54,7 @@ class ButtonScreen extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomButton(
+                  child: CustomTextButton(
                     color: colorOne,
                     width: width,
                     text: "Upload Gambar",
@@ -70,7 +70,7 @@ class ButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomButton(
+                  child: CustomTextButton(
                     color: colorTwo,
                     width: width,
                     text: "Petunjuk Arah",
@@ -86,7 +86,7 @@ class ButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomButton(
+                  child: CustomTextButton(
                     color: colorThree,
                     width: width,
                     text: "Shopee",
@@ -102,7 +102,7 @@ class ButtonScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
-                  child: CustomButton(
+                  child: CustomTextButton(
                     color: colorFour,
                     width: width,
                     text: "Dapatkan Tiket",

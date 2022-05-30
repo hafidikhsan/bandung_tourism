@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:bandung_tourism/presentation/screens/button_screen.dart';
+import 'package:bandung_tourism/presentation/screens/text_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/icon_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/image_button_screen.dart';
 import 'package:bandung_tourism/presentation/screens/on_boarding_screen.dart';
@@ -71,12 +71,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ButtonScreen(),
+                    builder: (context) => const TextButtonScreen(),
                   ),
                 );
               },
               child: const Text(
-                'Button',
+                'Text Button',
               ),
             ),
             ElevatedButton(
