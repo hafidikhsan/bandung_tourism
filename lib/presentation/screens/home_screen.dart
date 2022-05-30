@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bandung_tourism/presentation/screens/on_boarding_screen.dart';
 import 'package:bandung_tourism/presentation/screens/theme_setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -45,10 +46,23 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               'Home Screen',
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OnBoardingScreen(),
+                  ),
+                );
+              },
+              child: Text(
+                'Onboarding',
+              ),
+            )
           ],
         ),
       ),

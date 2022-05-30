@@ -11,10 +11,12 @@ void main() {
   di.init();
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  runApp(BlocProvider(
-    create: (context) => di.locator<ThemeManagerBloc>(),
-    child: const MyApp(),
-  ));
+  runApp(
+    BlocProvider(
+      create: (context) => di.locator<ThemeManagerBloc>(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
