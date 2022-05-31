@@ -16,8 +16,6 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    double width = screenSize.width - 60;
     Brightness screenBrightness = MediaQuery.platformBrightnessOf(context);
     return Scaffold(
       appBar: AppBar(
@@ -57,9 +55,9 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
                           child: Checkbox(
                             side: BorderSide(
                               width: 1.0,
-                              color: (isLight) ? bPrimaryVariant1 : bGrey,
+                              color: colorOne,
                             ),
-                            activeColor: (isLight) ? bPrimaryVariant1 : bGrey,
+                            activeColor: colorOne,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5),
                             ),

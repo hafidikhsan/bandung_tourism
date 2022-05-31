@@ -1,4 +1,4 @@
-import 'package:bandung_tourism/presentation/screens/home_screen.dart';
+import 'package:bandung_tourism/presentation/screens/app_main_screen.dart';
 import 'package:bandung_tourism/theme/presentation/bloc/theme_manager_bloc.dart';
 import 'package:bandung_tourism/theme/theme_data.dart';
 import 'package:bandung_tourism/theme/theme_injection.dart' as di;
@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
               : (state.isDark == ThemeModeEnum.darkTheme)
                   ? ThemeMode.dark
                   : ThemeMode.system,
-          home: const HomeScreen(),
+          home: const AppMainScreen(),
         );
       },
     );
